@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\LoginProcessing">
+      <UniqueIdentifier>{64f18e3b-4e70-40a1-a524-ead7b93a452b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MainGame">
+      <UniqueIdentifier>{6e93ce01-4105-45e1-8628-b18a1d3d7141}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TheSeaOfStars.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TheSeaOfStars\LoginProcessing\LoginDataProcessing.h">
+      <Filter>Header Files\LoginProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="TheSeaOfStars\LoginProcessing\LoginDisplayProcessing.h">
+      <Filter>Header Files\LoginProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="TheSeaOfStars\LoginProcessing\LoginLogicProcressing.h">
+      <Filter>Header Files\LoginProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="TheSeaOfStars\LoginProcessing\LoginScreenProcessing.h">
+      <Filter>Header Files\LoginProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\MainProperties.h">
+      <Filter>Header Files\MainGame</Filter>
+    </ClInclude>
+    <ClInclude Include="TheSeaOfStars\MainGame\UIUX\UIUXThread.h">
+      <Filter>Header Files\MainGame</Filter>
+    </ClInclude>
+    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\GamePlayMainProcessing.h">
+      <Filter>Header Files\MainGame</Filter>
+    </ClInclude>
+    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\GamePlayThread.h">
+      <Filter>Header Files\MainGame</Filter>
+    </ClInclude>
+    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\ObjectStructures.h">
+      <Filter>Header Files\MainGame</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectStructureMethods.h">
+      <Filter>Header Files\MainGame</Filter>
+    </ClInclude>
+    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\StructMode.h">
+      <Filter>Header Files\MainGame</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
