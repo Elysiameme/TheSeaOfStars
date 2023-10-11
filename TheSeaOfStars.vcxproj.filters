@@ -19,6 +19,12 @@
     <Filter Include="Header Files\MainGame">
       <UniqueIdentifier>{6e93ce01-4105-45e1-8628-b18a1d3d7141}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\MainGame\GamePlay">
+      <UniqueIdentifier>{02f156be-7dd0-4618-bfd8-fea7d0fb80fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MainGame\GamePlay\ObjectProcessing">
+      <UniqueIdentifier>{4f4a37d8-fb74-41b8-b3cf-4ff4d061188b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TheSeaOfStars.cpp">
@@ -38,26 +44,41 @@
     <ClInclude Include="TheSeaOfStars\LoginProcessing\LoginScreenProcessing.h">
       <Filter>Header Files\LoginProcessing</Filter>
     </ClInclude>
-    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\MainProperties.h">
-      <Filter>Header Files\MainGame</Filter>
-    </ClInclude>
     <ClInclude Include="TheSeaOfStars\MainGame\UIUX\UIUXThread.h">
       <Filter>Header Files\MainGame</Filter>
     </ClInclude>
     <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\GamePlayMainProcessing.h">
-      <Filter>Header Files\MainGame</Filter>
+      <Filter>Header Files\MainGame\GamePlay</Filter>
     </ClInclude>
     <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\GamePlayThread.h">
-      <Filter>Header Files\MainGame</Filter>
+      <Filter>Header Files\MainGame\GamePlay</Filter>
     </ClInclude>
-    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\ObjectStructures.h">
-      <Filter>Header Files\MainGame</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjectStructureMethods.h">
-      <Filter>Header Files\MainGame</Filter>
+    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\MainProperties.h">
+      <Filter>Header Files\MainGame\GamePlay</Filter>
     </ClInclude>
     <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\StructMode.h">
-      <Filter>Header Files\MainGame</Filter>
+      <Filter>Header Files\MainGame\GamePlay</Filter>
+    </ClInclude>
+    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\PeripheralsDataProcessing.h">
+      <Filter>Header Files\MainGame\GamePlay</Filter>
+    </ClInclude>
+    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\ObjectProcessing\Character.h">
+      <Filter>Header Files\MainGame\GamePlay\ObjectProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\ObjectProcessing\ObjectStructures.h">
+      <Filter>Header Files\MainGame\GamePlay\ObjectProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\ObjectProcessing\Animation.h">
+      <Filter>Header Files\MainGame\GamePlay\ObjectProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\ObjectProcessing\Camera.h">
+      <Filter>Header Files\MainGame\GamePlay\ObjectProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\ObjectProcessing\Map.h">
+      <Filter>Header Files\MainGame\GamePlay\ObjectProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\ObjectProcessing\Layer.h">
+      <Filter>Header Files\MainGame\GamePlay\ObjectProcessing</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

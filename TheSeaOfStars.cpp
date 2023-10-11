@@ -2,9 +2,11 @@
 //
 
 #include <stdio.h>
-#include "TheSeaOfStars/LoginProcessing/LoginScreenProcessing.h"
+//#include "TheSeaOfStars/LoginProcessing/LoginScreenProcessing.h"
+#include "TheSeaOfStars/MainGame/GamePlay/GamePlayMainProcessing.h"
 int main(int argc, char* argv[])
 {
-	ScreenProcessing();
+	//ScreenProcessing();
+	GamePlayMainProcessing();
 	return 0;
 }

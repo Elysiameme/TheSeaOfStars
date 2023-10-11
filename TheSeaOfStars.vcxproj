@@ -133,7 +133,6 @@
     <ClCompile Include="TheSeaOfStars.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ObjectStructureMethods.h" />
     <ClInclude Include="TheSeaOfStars\LoginProcessing\LoginDataProcessing.h" />
     <ClInclude Include="TheSeaOfStars\LoginProcessing\LoginDisplayProcessing.h" />
     <ClInclude Include="TheSeaOfStars\LoginProcessing\LoginLogicProcressing.h" />
@@ -141,7 +140,13 @@
     <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\GamePlayMainProcessing.h" />
     <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\GamePlayThread.h" />
     <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\MainProperties.h" />
-    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\ObjectStructures.h" />
+    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\ObjectProcessing\Animation.h" />
+    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\ObjectProcessing\Camera.h" />
+    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\ObjectProcessing\Character.h" />
+    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\ObjectProcessing\Layer.h" />
+    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\ObjectProcessing\Map.h" />
+    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\ObjectProcessing\ObjectStructures.h" />
+    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\PeripheralsDataProcessing.h" />
     <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\StructMode.h" />
     <ClInclude Include="TheSeaOfStars\MainGame\UIUX\UIUXThread.h" />
   </ItemGroup>

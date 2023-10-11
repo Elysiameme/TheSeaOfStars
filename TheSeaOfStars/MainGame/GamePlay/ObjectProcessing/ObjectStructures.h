@@ -4,7 +4,6 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include <string>
-#include "TheSeaOfStars/MainGame/GamePlay/StructMode.h"
 
 	using namespace std; 
 
@@ -17,22 +16,34 @@
 		SDL_Texture* ObjectTexture;
 		SDL_Surface* ObjectSurface;
 	public:
-		void Initialized(const char* Path, SDL_Renderer* GameRenderer);
+		void Load_IMG(const char* Path, SDL_Renderer* GameRenderer);
+		void Initialized_IMG();
 		void Destroy();
 		void RenderPicture(SDL_Renderer* GameRenderer, int Xpos, int Ypos, int SizeRender);
 
 	};
 
 
-	void ObjectStructure::Initialized(const char* Path, SDL_Renderer* GameRenderer)
-		// Path is the link to source image file	
+	void ObjectStructure::Load_IMG(const char* Path, SDL_Renderer* GameRenderer)
 	{
+		// Path is the link to source image file	
 		ObjectSurface = IMG_Load(Path);
-		ObjectTexture = SDL_CreateTextureFromSurface(GameRenderer, ObjectSurface);
-		if (SDL_QueryTexture(ObjectTexture, NULL, NULL, &PositionFromSourceIMG.w, &PositionFromSourceIMG.h) == 0)
+		if (ObjectSurface == NULL)
+			cout << "Error : Cann't Loading The Image's Surface!";
+		else
 		{
-			cout << "Error : Cann't Loading The Image's Size!" << endl << "Error File : " << Path;
+			ObjectTexture = SDL_CreateTextureFromSurface(GameRenderer, ObjectSurface);
+			if (ObjectTexture == NULL)
+				cout << "Error : Cann't Loading The Image's Texture!";
 		}
+			
+	}
+
+
+	void ObjectStructure::Initialized_IMG()
+	{
+		if (SDL_QueryTexture(ObjectTexture, NULL, NULL, &PositionFromSourceIMG.w, &PositionFromSourceIMG.h) != 0)
+			cout << "Error : Cann't Loading The Image's Size!";
 		else
 		{
 			PositionFromSourceIMG.x = 0;

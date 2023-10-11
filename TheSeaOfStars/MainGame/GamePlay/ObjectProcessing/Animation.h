@@ -70,5 +70,5 @@
 
 	void Animation::RenderAnimation()
 	{
-		
+		this->PositionRenderInScreen
 	}
