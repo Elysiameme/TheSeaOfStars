@@ -15,18 +15,26 @@
 		SDL_Rect PositionFromSourceIMG;
 		SDL_Texture* ObjectTexture;
 		SDL_Surface* ObjectSurface;
+		const char* PathtoSourceImg;
 	public:
+
 		void Load_IMG(const char* Path, SDL_Renderer* GameRenderer);
 		void Initialized_IMG();
 		void Destroy();
 		void RenderPicture(SDL_Renderer* GameRenderer, int Xpos, int Ypos, int SizeRender);
+		SDL_Texture* GetTexture()
+		{
+			return ObjectTexture;
+		}
+
 
 	};
 
 
 	void ObjectStructure::Load_IMG(const char* Path, SDL_Renderer* GameRenderer)
 	{
-		// Path is the link to source image file	
+		// Path is the link to source image file
+
 		ObjectSurface = IMG_Load(Path);
 		if (ObjectSurface == NULL)
 			cout << "Error : Cann't Loading The Image's Surface!";
@@ -36,7 +44,6 @@
 			if (ObjectTexture == NULL)
 				cout << "Error : Cann't Loading The Image's Texture!";
 		}
-			
 	}
 
 
@@ -46,8 +53,8 @@
 			cout << "Error : Cann't Loading The Image's Size!";
 		else
 		{
-			PositionFromSourceIMG.x = 0;
-			PositionFromSourceIMG.y = 0;
+			PositionFromSourceIMG.x = 1;
+			PositionFromSourceIMG.y = 1;
 		}
 	}
 
@@ -63,6 +70,8 @@
 	{
 		PositionRenderInScreen.x = Xpos;
 		PositionRenderInScreen.y = Ypos;
+		PositionFromSourceIMG.w = PositionFromSourceIMG.w / SizeRender;
+		PositionFromSourceIMG.h = PositionFromSourceIMG.h / SizeRender;
 		PositionRenderInScreen.w = PositionFromSourceIMG.w * SizeRender;
 		PositionRenderInScreen.h = PositionFromSourceIMG.h * SizeRender;
 

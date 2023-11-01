@@ -47,18 +47,6 @@
     <ClInclude Include="TheSeaOfStars\MainGame\UIUX\UIUXThread.h">
       <Filter>Header Files\MainGame</Filter>
     </ClInclude>
-    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\GamePlayMainProcessing.h">
-      <Filter>Header Files\MainGame\GamePlay</Filter>
-    </ClInclude>
-    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\GamePlayThread.h">
-      <Filter>Header Files\MainGame\GamePlay</Filter>
-    </ClInclude>
-    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\MainProperties.h">
-      <Filter>Header Files\MainGame\GamePlay</Filter>
-    </ClInclude>
-    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\StructMode.h">
-      <Filter>Header Files\MainGame\GamePlay</Filter>
-    </ClInclude>
     <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\PeripheralsDataProcessing.h">
       <Filter>Header Files\MainGame\GamePlay</Filter>
     </ClInclude>
@@ -79,6 +67,18 @@
     </ClInclude>
     <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\ObjectProcessing\Layer.h">
       <Filter>Header Files\MainGame\GamePlay\ObjectProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\MainProperties.h">
+      <Filter>Header Files\MainGame\GamePlay</Filter>
+    </ClInclude>
+    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\GamePlayMainProcessing.h">
+      <Filter>Header Files\MainGame\GamePlay</Filter>
+    </ClInclude>
+    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\StructMode.h">
+      <Filter>Header Files\MainGame\GamePlay</Filter>
+    </ClInclude>
+    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\ModuleStartGame.h">
+      <Filter>Header Files\MainGame\GamePlay</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -138,8 +138,8 @@
     <ClInclude Include="TheSeaOfStars\LoginProcessing\LoginLogicProcressing.h" />
     <ClInclude Include="TheSeaOfStars\LoginProcessing\LoginScreenProcessing.h" />
     <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\GamePlayMainProcessing.h" />
-    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\GamePlayThread.h" />
     <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\MainProperties.h" />
+    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\ModuleStartGame.h" />
     <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\ObjectProcessing\Animation.h" />
     <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\ObjectProcessing\Camera.h" />
     <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\ObjectProcessing\Character.h" />

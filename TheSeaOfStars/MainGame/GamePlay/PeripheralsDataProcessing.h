@@ -3,6 +3,7 @@
 #include <iostream>
 #include <SDL.h>
 
+
 using namespace std;
 
 bool MouseEventProcessing(int& x, int& y, SDL_Window* MenuWindow, SDL_Renderer* DrawMenu, SDL_Event event)
@@ -31,13 +32,15 @@ bool MouseEventProcessing(int& x, int& y, SDL_Window* MenuWindow, SDL_Renderer* 
 		}
 	}
 }
-void KeyboardEventProcessing()
+SDL_Event KeyboardEventProcessing()
 {
+	SDL_Event event;
 	while (true)
 	{
-		while (SDL_PollEvent(&event))
+		while (SDL_WaitEvent(&event))
 		{
-
+			if (event.type == SDL_KEYDOWN)
+				return event;
 		}
 	}
 }

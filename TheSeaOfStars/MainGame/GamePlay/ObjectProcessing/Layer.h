@@ -32,7 +32,7 @@
 		{
 			Render_Order = Order;
 		}
-		template <class TemplateClass>
+		template <typename TemplateClass>
 		void AddObjectToLayer(TemplateClass* ObjectAddToLayer, const char* Name, int TilePosX, int TilePosY)
 		{
 			if (ObjectAddToLayer)
@@ -47,17 +47,7 @@
 			else
 				cout << "Error : The Object Pointer Is NULL!";
 		}
-		void Render(RENDERSETTINGS mode);
 	};
 
 	
-	void Layer::Render(RENDERSETTINGS mode)
-	{
-		if (mode == RENDERALL)
-		{
-			for (int i = 0; i < ObjectList.size(); i++)
-			{
 
-			}
-		}
-	}

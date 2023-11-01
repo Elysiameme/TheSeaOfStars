@@ -16,6 +16,7 @@ private:
 public:
 	void Initialized_Camera();
 	void View(SDL_Renderer* GameRenderer);
+	//void 
 };
 
 
