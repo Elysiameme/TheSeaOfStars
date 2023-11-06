@@ -1,0 +1,4 @@
+"Warning, large amplitude gravitational wave detected.
+Warning, gravitational wave is affecting the Warp process.
+Warning, curvature of spacetime around the ship has changed beyond the allowable
+threshold by 1.36 times."[Ely]

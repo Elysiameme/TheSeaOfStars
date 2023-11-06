@@ -25,6 +25,9 @@
     <Filter Include="Header Files\MainGame\GamePlay\ObjectProcessing">
       <UniqueIdentifier>{4f4a37d8-fb74-41b8-b3cf-4ff4d061188b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\MainGame\UIUX">
+      <UniqueIdentifier>{1d8eb9a7-64b2-42ba-9b3a-f77a6e79c89d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TheSeaOfStars.cpp">
@@ -43,9 +46,6 @@
     </ClInclude>
     <ClInclude Include="TheSeaOfStars\LoginProcessing\LoginScreenProcessing.h">
       <Filter>Header Files\LoginProcessing</Filter>
-    </ClInclude>
-    <ClInclude Include="TheSeaOfStars\MainGame\UIUX\UIUXThread.h">
-      <Filter>Header Files\MainGame</Filter>
     </ClInclude>
     <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\PeripheralsDataProcessing.h">
       <Filter>Header Files\MainGame\GamePlay</Filter>
@@ -79,6 +79,15 @@
     </ClInclude>
     <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\ModuleStartGame.h">
       <Filter>Header Files\MainGame\GamePlay</Filter>
+    </ClInclude>
+    <ClInclude Include="TheSeaOfStars\MainGame\UIUX\UIUXThread.h">
+      <Filter>Header Files\MainGame\UIUX</Filter>
+    </ClInclude>
+    <ClInclude Include="TheSeaOfStars\MainGame\UIUX\ConversationProcessing.h">
+      <Filter>Header Files\MainGame\UIUX</Filter>
+    </ClInclude>
+    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\QuestSystem.h">
+      <Filter>Header Files\MainGame\GamePlay\ObjectProcessing</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

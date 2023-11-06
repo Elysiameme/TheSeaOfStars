@@ -31,6 +31,7 @@ bool MouseEventProcessing(int& x, int& y, SDL_Window* MenuWindow, SDL_Renderer* 
 			}
 		}
 	}
+	return false;
 }
 SDL_Event KeyboardEventProcessing()
 {

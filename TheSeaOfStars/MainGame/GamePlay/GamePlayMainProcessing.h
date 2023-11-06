@@ -7,6 +7,7 @@
 #include <SDL_image.h>
 #include "MainProperties.h"
 #include "ModuleStartGame.h"
+
 	using namespace std;
 	
 
@@ -25,7 +26,7 @@
 		MainGameRenderer = SDL_CreateRenderer(MainGameWindow, -1, 0);
 
 		GameTrailer(MainGameRenderer);
-		CaptainOfficeVRScene(MainGameRenderer);
+		CaptainOfficeVRScene(MainGameWindow, MainGameRenderer);
 
 		
 		return 0;

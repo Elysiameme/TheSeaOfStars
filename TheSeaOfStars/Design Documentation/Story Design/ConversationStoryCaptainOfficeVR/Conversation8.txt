@@ -1,0 +1,4 @@
+"Warning, curvature of spacetime around the ship has changed beyond the allowable
+threshold by 2.08 times.
+Warning, Warp engine overload, ship has deviated from star lane.
+Warning, Warp engine overload, ship has deviated from star lane."[Ely].

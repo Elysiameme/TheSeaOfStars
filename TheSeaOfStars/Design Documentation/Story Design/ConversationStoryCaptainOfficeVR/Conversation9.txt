@@ -1,0 +1,3 @@
+"Calculate a new star path immediately, by any means necessary, to bring the ship
+to the nearest star system."[Tran Minh Duc].
+**Warning: Engine adjustment malfunction, course change failed.**[Ely].

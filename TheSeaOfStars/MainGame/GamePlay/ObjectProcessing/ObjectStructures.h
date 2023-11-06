@@ -20,13 +20,17 @@
 
 		void Load_IMG(const char* Path, SDL_Renderer* GameRenderer);
 		void Initialized_IMG();
-		void Destroy();
 		void RenderPicture(SDL_Renderer* GameRenderer, int Xpos, int Ypos, int SizeRender);
 		SDL_Texture* GetTexture()
 		{
 			return ObjectTexture;
 		}
-
+		SDL_Rect* GetPositionRenderInScreen() { return &PositionRenderInScreen; }
+		SDL_Rect* GetPositionRenderFromSourceIMG() { return &PositionFromSourceIMG; }
+		~ObjectStructure() {
+			SDL_FreeSurface(ObjectSurface);
+			SDL_DestroyTexture(ObjectTexture);
+		}
 
 	};
 
@@ -37,7 +41,7 @@
 
 		ObjectSurface = IMG_Load(Path);
 		if (ObjectSurface == NULL)
-			cout << "Error : Cann't Loading The Image's Surface!";
+			cout << "Error : Cann't Loading The Image's Surface! Enror Link :" << Path;
 		else
 		{
 			ObjectTexture = SDL_CreateTextureFromSurface(GameRenderer, ObjectSurface);
@@ -58,13 +62,7 @@
 		}
 	}
 
-	void ObjectStructure::Destroy()
-	{
-		SDL_FreeSurface(ObjectSurface);
-		SDL_DestroyTexture(ObjectTexture);
-	}
 	
-
 	void ObjectStructure::RenderPicture(SDL_Renderer* GameRenderer, int Xpos, int Ypos, int SizeRender)
 		// Xpos, Ypos is X, Y Position in Game's Window
 	{

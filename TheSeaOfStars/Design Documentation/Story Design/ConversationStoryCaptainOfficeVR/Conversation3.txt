@@ -1,0 +1,4 @@
+[Command Ship] - [Over Comms] : Captains, report ship status.
+
+[Ship 001] - [Over Comms] : Ship 001 repairs are done.
+[Ship 012] - [Over Comms] : Ship 012 repairs are done.

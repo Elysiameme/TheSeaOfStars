@@ -1,0 +1,5 @@
+[Tran Minh Duc] - [Over the Communication Channel]: Ship 036 has completed repairs.
+[Pilot Ship] - [Over the Communication Channel]: Star Route 31 has been established, and the
+fleet's data has been synchronized.
+[Commander Ship] -  [Over the Communication Channel]: The entire fleet has entered 
+synchronized control mode, preparing for Warp in 10 seconds. 9 8 7 6 5 4 3 2 1.

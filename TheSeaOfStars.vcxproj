@@ -147,7 +147,9 @@
     <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\ObjectProcessing\Map.h" />
     <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\ObjectProcessing\ObjectStructures.h" />
     <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\PeripheralsDataProcessing.h" />
+    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\QuestSystem.h" />
     <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\StructMode.h" />
+    <ClInclude Include="TheSeaOfStars\MainGame\UIUX\ConversationProcessing.h" />
     <ClInclude Include="TheSeaOfStars\MainGame\UIUX\UIUXThread.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -10,6 +10,9 @@
 #include "ObjectProcessing/Character.h"
 #include "ObjectProcessing/Camera.h"
 #include "ObjectProcessing/ObjectStructures.h"
+#include <thread>
+#include <mutex>
+#include <condition_variable>
 
 static SDL_Window* MainGameWindow = NULL;
 static SDL_Renderer* MainGameRenderer = NULL;
@@ -18,6 +21,13 @@ static SDL_Event event;
 const int SCREEN_HEIGHT = 640; 
 const int SCREEN_WIDTH = 1280;
 
+bool Quest1_Complete = false;
+bool Quest2_Complete = false;
+bool Quest3_Complete = false;
+
+
+mutex QuestThreadAccessLock;
+condition_variable SighNotice;
 
 Map CaptainDucOfficeVR; 
 
