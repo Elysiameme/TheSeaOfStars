@@ -7,6 +7,8 @@
 #include <SDL_image.h>
 #include "MainProperties.h"
 #include "ModuleStartGame.h"
+#include "ModuleMidGame.h"
+//#include "QuestSystem.h"
 
 	using namespace std;
 	
@@ -23,8 +25,11 @@
 										   SDL_WINDOWPOS_CENTERED,
 										   SCREEN_WIDTH, 
 										   SCREEN_HEIGHT, 0);
+
+
 		MainGameRenderer = SDL_CreateRenderer(MainGameWindow, -1, 0);
 
+		
 		GameTrailer(MainGameRenderer);
 		CaptainOfficeVRScene(MainGameWindow, MainGameRenderer);
 

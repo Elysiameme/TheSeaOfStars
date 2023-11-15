@@ -8,13 +8,20 @@
 
 using namespace std;
 
-
+struct CharacterStatus
+{
+	SDL_Texture* AnimationTexture;
+	SDL_Rect *SourcePos;
+	SDL_Rect *DesinationPos;
+};
 class Character : public ObjectStructure
 {
 private:
 	int CharacterMoveFrames;
 	SDL_Rect RenderPosition;
+	CharacterStatus StatusinRealTime;
 public:
+	CharacterStatus GetStatusInRealTime() { return StatusinRealTime; }
 	void GetRenderPosition(int x, int y)
 	{
 		RenderPosition.x = x;
@@ -55,17 +62,28 @@ void Character::Move(const char* PathTop, const char* PathDown, const char* Path
 		switch (KeyboardEvent.key.keysym.sym)
 		{
 			case 1073741906:
-				cout << "Pressed" << endl;
 				movetop.RenderAnimation(&RenderPosition, GameRenderer, MapData);
+				StatusinRealTime.AnimationTexture = movetop.GetStatus().AnimationTexture;
+				StatusinRealTime.SourcePos = movetop.GetStatus().SourcePos;
+				StatusinRealTime.DesinationPos = movetop.GetStatus().DesinationPos;
 				break;
 			case 1073741905:
 				movedown.RenderAnimation(&RenderPosition, GameRenderer, MapData);
+				StatusinRealTime.AnimationTexture = movetop.GetStatus().AnimationTexture;
+				StatusinRealTime.SourcePos = movetop.GetStatus().SourcePos;
+				StatusinRealTime.DesinationPos = movetop.GetStatus().DesinationPos;
 				break;
 			case 1073741904:
 				moveleft.RenderAnimation(&RenderPosition, GameRenderer, MapData);
+				StatusinRealTime.AnimationTexture = movetop.GetStatus().AnimationTexture;
+				StatusinRealTime.SourcePos = movetop.GetStatus().SourcePos;
+				StatusinRealTime.DesinationPos = movetop.GetStatus().DesinationPos;
 				break;
 			case 1073741903:
 				moveright.RenderAnimation(&RenderPosition, GameRenderer, MapData);
+				StatusinRealTime.AnimationTexture = movetop.GetStatus().AnimationTexture;
+				StatusinRealTime.SourcePos = movetop.GetStatus().SourcePos;
+				StatusinRealTime.DesinationPos = movetop.GetStatus().DesinationPos;
 				break;
 		}
 	}

@@ -29,7 +29,15 @@ bool Quest3_Complete = false;
 mutex QuestThreadAccessLock;
 condition_variable SighNotice;
 
-Map CaptainDucOfficeVR; 
+Map CaptainDucOfficeVR;
+Map HibernateCabin;
+Map CommanderRoom;
+Map WarpEngineRoom;
+Map Sentinus_Antarctic;
+Map BaseInAntarctica;
+Map IceCage;
+Map MountainGroove;
+
 
 Character CaptainDuc;
 

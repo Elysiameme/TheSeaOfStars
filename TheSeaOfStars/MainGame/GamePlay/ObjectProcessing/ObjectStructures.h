@@ -15,23 +15,20 @@
 		SDL_Rect PositionFromSourceIMG;
 		SDL_Texture* ObjectTexture;
 		SDL_Surface* ObjectSurface;
+		SDL_Renderer* ObjectRenderer;
 		const char* PathtoSourceImg;
 	public:
 
 		void Load_IMG(const char* Path, SDL_Renderer* GameRenderer);
 		void Initialized_IMG();
 		void RenderPicture(SDL_Renderer* GameRenderer, int Xpos, int Ypos, int SizeRender);
+		void GetRenderer(SDL_Renderer* Renderer) { ObjectRenderer = Renderer; }
 		SDL_Texture* GetTexture()
 		{
 			return ObjectTexture;
 		}
 		SDL_Rect* GetPositionRenderInScreen() { return &PositionRenderInScreen; }
 		SDL_Rect* GetPositionRenderFromSourceIMG() { return &PositionFromSourceIMG; }
-		~ObjectStructure() {
-			SDL_FreeSurface(ObjectSurface);
-			SDL_DestroyTexture(ObjectTexture);
-		}
-
 	};
 
 

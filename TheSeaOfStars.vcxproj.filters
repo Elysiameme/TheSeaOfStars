@@ -89,5 +89,14 @@
     <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\QuestSystem.h">
       <Filter>Header Files\MainGame\GamePlay\ObjectProcessing</Filter>
     </ClInclude>
+    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\ModuleMidGame.h">
+      <Filter>Header Files\MainGame\GamePlay</Filter>
+    </ClInclude>
+    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\ConversationProcessing.h">
+      <Filter>Header Files\MainGame\GamePlay</Filter>
+    </ClInclude>
+    <ClInclude Include="TheSeaOfStars\MainGame\GamePlay\MapContactAndSpecificProcessing.h">
+      <Filter>Header Files\MainGame\GamePlay</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

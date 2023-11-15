@@ -15,6 +15,7 @@ public:
 	vector<int> MapTileID;
 	vector<SDL_Rect> MapTileBlock;
 	void LoadMap(const char* Pathtxt, const char* PathIMG, SDL_Renderer* GameRenderer);
+	void RenderMap();
 };
 
 
@@ -23,7 +24,7 @@ void Map::LoadMap(const char* Pathtxt, const char* PathIMG, SDL_Renderer* GameRe
 	FILE* filemap;
 	SDL_Rect InputPositionMaptiles = {};
 	int Xtiles = 0, Ytiles = 0, IDreaded = 0;
-
+	
 	errno_t openfilemap = fopen_s(&filemap, Pathtxt, "r+");
 	if (openfilemap != 0)
 	{
@@ -33,8 +34,7 @@ void Map::LoadMap(const char* Pathtxt, const char* PathIMG, SDL_Renderer* GameRe
 	{
 		this->Load_IMG(PathIMG, GameRenderer);
 		this->Initialized_IMG();
-		SDL_QueryTexture(this->ObjectTexture, NULL, NULL, &Map_width, &Map_height);
-		this->RenderPicture(GameRenderer, 1, 1, (Map_width/1280));
+		this->GetRenderer(GameRenderer);
 		while (fscanf_s(filemap, "%d ", &IDreaded) != EOF)
 		{
 			if (Xtiles < (PositionFromSourceIMG.w/16) )
@@ -51,4 +51,11 @@ void Map::LoadMap(const char* Pathtxt, const char* PathIMG, SDL_Renderer* GameRe
 			this->MapTileBlock.push_back(InputPositionMaptiles);
 		}
 	}
+}
+
+
+void Map::RenderMap()
+{
+	SDL_QueryTexture(this->ObjectTexture, NULL, NULL, &Map_width, &Map_height);
+	this->RenderPicture(this->ObjectRenderer, 1, 1, (Map_width / 1280));
 }

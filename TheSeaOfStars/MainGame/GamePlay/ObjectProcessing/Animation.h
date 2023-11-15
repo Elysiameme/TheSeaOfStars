@@ -32,11 +32,20 @@
 	{
 		int x, y;
 	};
+
+	struct AnimationStatusInRealTime
+	{
+		SDL_Texture* AnimationTexture;
+		SDL_Rect* SourcePos;
+		SDL_Rect* DesinationPos;
+	};
+
 	class Animation : public ObjectStructure
 	{
 	private:
 		ANIMATION_RENDER_MODE rendermode;
 		ANIMATION_DIRECTION renderdirection;
+		AnimationStatusInRealTime Status;
 		int numberframe;
 		int frame_width;
 		int frame_height;
@@ -44,6 +53,7 @@
 	public:
 		void SetOptionAnimation(int frames, ANIMATION_DIRECTION direction, ANIMATION_RENDER_MODE mode, SDL_Renderer* GameRenderer);
 		void RenderAnimation(SDL_Rect* PosRender, SDL_Renderer* GameRenderer, Map MapData);
+		AnimationStatusInRealTime GetStatus() { return Status; }
 	};
 
 
@@ -120,6 +130,9 @@
 					SDL_RenderPresent(GameRenderer);
 					SDL_RenderCopy(GameRenderer, MapData.GetTexture(), PosRender, PosRender);
 					SDL_Delay(50);
+					Status.AnimationTexture = this->ObjectTexture;
+					Status.SourcePos = &RenderFrames[i];
+					Status.DesinationPos = PosRender;
 				}
 				break;
 			case DOWN:
@@ -133,6 +146,9 @@
 					SDL_RenderPresent(GameRenderer);
 					SDL_RenderCopy(GameRenderer, MapData.GetTexture(), PosRender, PosRender);
 					SDL_Delay(50);
+					Status.AnimationTexture = this->ObjectTexture;
+					Status.SourcePos = &RenderFrames[i];
+					Status.DesinationPos = PosRender;
 				}
 				break;
 			case LEFT:
@@ -154,6 +170,9 @@
 					SDL_RenderPresent(GameRenderer);
 					SDL_RenderCopy(GameRenderer, MapData.GetTexture(), PosRender, PosRender);
 					SDL_Delay(50);
+					Status.AnimationTexture = this->ObjectTexture;
+					Status.SourcePos = &RenderFrames[i];
+					Status.DesinationPos = PosRender;
 				}
 				break;
 			}

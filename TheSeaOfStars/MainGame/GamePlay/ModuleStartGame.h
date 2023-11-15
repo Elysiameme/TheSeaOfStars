@@ -13,7 +13,8 @@
 #include <mutex>
 #include <condition_variable>
 #include "PeripheralsDataProcessing.h"
-#include "QuestSystem.h"
+#include "ConversationProcessing.h"
+//#include "QuestSystem.h"
 
 
 
@@ -84,74 +85,10 @@ void GameTrailer(SDL_Renderer* MainGameRenderer)
 	}
 }
 
-void ConversationProcessing(SDL_Window* MenuWindow, SDL_Renderer* MainGameRenderer, const char* SourceText, Map MapRenderData)
-{
-	ObjectStructure ConversationBoard = {};
-	ConversationBoard.Load_IMG( "TheSeaOfStars/Design Documentation/Design Idea/ConversationBoard.png", MainGameRenderer);
-	ConversationBoard.Initialized_IMG();
-	ConversationBoard.RenderPicture(MainGameRenderer, 90, 420, 1);
-	SDL_Event Event = {};
-
-	TTF_Init();
-	SDL_Surface* TextSurface = NULL;
-	SDL_Texture* TextTexture = NULL;
-	SDL_Rect TextRect = {}, InputBoxRect = {};
-	TTF_Font* TextFont = TTF_OpenFont("C:/Windows/Fonts/Arial.ttf", 28);
-	SDL_Color TextColor = { 255, 255, 255 };
-	TextRect.w = 10;
-	TextRect.h = 20;
-	TextRect.x = 121;
-	TextRect.y = 452;
-	int MousePosX = 0, MousePosY = 0;
-	FILE* openSourceText;
-
-	if (fopen_s(&openSourceText, SourceText, "r") != 0)
-	{
-		cout << "Error : Cann't Open The Text Trailer File! Error Link :" << SourceText;
-	}
-	else
-	{
-		char c = NULL;
-		while (c != EOF)
-		{
-			c = fgetc(openSourceText);
-			string TextReaded;
-			TextReaded += c;
-			if (TextReaded == "\n")
-			{
-				TextRect.x = 121;
-				TextRect.y += 20;
-				continue;
-			}
-			else
-				TextRect.x += 11;
-			TextSurface = TTF_RenderText_Solid(TextFont, TextReaded.c_str(), TextColor);
-			if (TextSurface == NULL)
-				printf("TextSurface run wrong! Please test again!");
-			TextTexture = SDL_CreateTextureFromSurface(MainGameRenderer, TextSurface);
-			if (TextTexture == NULL)
-				printf("TextTexture run wrong! Please test again!");
-			SDL_RenderCopy(MainGameRenderer, TextTexture, NULL, &TextRect);
-			SDL_RenderPresent(MainGameRenderer);
-			SDL_Delay(50);
-		}
-		fclose(openSourceText);
-		while (1)
-		{
-			if (!MouseEventProcessing(MousePosX, MousePosY, MenuWindow, MainGameRenderer, Event))
-				cout << "Error in Mouse Event Processing" << endl;
-			if (MousePosX >= 90 && MousePosX <= 1190 && MousePosY >= 420 && MousePosY <= 600)
-				break;
-			cout << "Chay den day roi nha" << endl;
-		}
-		SDL_RenderCopy(MainGameRenderer, MapRenderData.GetTexture(), ConversationBoard.GetPositionRenderFromSourceIMG(), ConversationBoard.GetPositionRenderInScreen());
-	}
-}
-
 
 void ConversationCaptainOfficeVR(SDL_Window* MenuWindow, SDL_Renderer* MainGameRenderer, Map MapRenderData)
 {
-	for (int i = 1; i < 11; i++)
+	for (int i = 1; i < 10; i++)
 	{
 		cout << "Checking times repeated : " << i << endl;
 		char Path[200] = "TheSeaOfStars/Design Documentation/Story Design/ConversationStoryCaptainOfficeVR/Conversation";
@@ -166,12 +103,12 @@ void ConversationCaptainOfficeVR(SDL_Window* MenuWindow, SDL_Renderer* MainGameR
 
 void CaptainOfficeVRScene(SDL_Window* MenuWindow, SDL_Renderer* MainGameRenderer)
 {
-	thread QuestThread(QuestSystemCenterProcessing);
-	QuestThread.detach();
+
 
 	CaptainDucOfficeVR.LoadMap("TheSeaOfStars/MainGame/GamePlay/Map/WorkingRoom.txt",
 							   "TheSeaOfStars/MainGame/GamePlay/Map/WorkingRoom.png",
 								MainGameRenderer);
+	CaptainDucOfficeVR.RenderMap();
 
 	CaptainDuc.GetRenderPosition(562, 259);
 	CaptainDuc.RenderCharacter("TheSeaOfStars/Design Documentation/Design Idea/CaptainDuc.png",
@@ -179,10 +116,10 @@ void CaptainOfficeVRScene(SDL_Window* MenuWindow, SDL_Renderer* MainGameRenderer
 
 	ConversationCaptainOfficeVR(MenuWindow, MainGameRenderer, CaptainDucOfficeVR);
 
-	
 	CaptainDuc.Move("TheSeaOfStars/Design Documentation/Design Idea/CaptainDucMoveUp.png",
 					"TheSeaOfStars/Design Documentation/Design Idea/CaptainDucMoveDown.png",
 					"TheSeaOfStars/Design Documentation/Design Idea/CaptainDucMoveRight.png",
 					"TheSeaOfStars/Design Documentation/Design Idea/CaptainDucMoveLeft.png",
 					 MainGameRenderer, CaptainDucOfficeVR);
+	
 }
