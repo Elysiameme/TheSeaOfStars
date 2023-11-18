@@ -1,0 +1,5 @@
+"Initiate self-destruct sequence for entire ship, countdown: 5 years, 8 months, 27 days."[Ely].
+"Activate special Photon missile code 3EAC66-H101QR31, begin data backup to missile 
+memory core."[Ely].
+""Beginning to establish custom settings for emergency status 31... configuration complete."
+[Ely].

@@ -1,0 +1,3 @@
+"Activate the wake-up cycle, activate the emergency communication channel with the 
+fleet, and continuously transmit the ship's position through the communication channel.
+"[Tran Minh Duc].

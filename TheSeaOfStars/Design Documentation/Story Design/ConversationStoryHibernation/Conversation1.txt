@@ -1,0 +1,5 @@
+"Warning, Warp Engine temperature was overload"[Ely].
+"Warning, Warp Engine temperature was overload"[Ely].
+"Warning, Warp Engine is corrupted, Dark-Matter reactor  reaches the dangerous level".[Ely].
+
+

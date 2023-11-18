@@ -1,0 +1,5 @@
+"Command confirmed."[Ely].
+"Ely, activate emergency status 31."[Tran Minh Duc].
+"Captain, are you sure?"[Ely].
+"This is not a statement that a shipboard AI should make."[Tran Minh Duc].
+"I'm your Assistant, Captain".[Ely]. 

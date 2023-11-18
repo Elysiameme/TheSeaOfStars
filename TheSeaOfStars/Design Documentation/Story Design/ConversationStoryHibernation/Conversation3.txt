@@ -1,0 +1,2 @@
+"Reactor shutdown complete, backup reactor activated, power output at 18% of 
+maximum capacity."[Ely].

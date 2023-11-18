@@ -1,0 +1,3 @@
+"Ely, check if there are any star systems nearby."[Tran Minh Duc].
+"We are within the Sentinus star system, Captain."[Ely].
+"Sentinus? Ely, please provide more detailed information."[Tran Minh Duc].
